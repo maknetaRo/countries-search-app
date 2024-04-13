@@ -1,0 +1,33 @@
+.country-card {
+  width: 264px;
+  height: 336px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 160px 1fr;
+  border-radius: 5px;
+
+  .card-img {
+    width: 264px;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .card-section {
+    padding: 24px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 16px;
+
+    .country-name {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .info-title {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 <form class="filter-form">
-  <label for="select" style="visibility: hidden; width: 0; height: 0"
+  <label
+    for="select"
+    style="display: flex; visibility: hidden; width: 0; height: 0"
     >Filter by region</label
   >
   <app-button
@@ -11,10 +13,17 @@
     aria-haspopup="listbox"
     aria-expanded="false"
     tabindex="0"
+    id="select"
+    disabled
   />
-  <ul>
-    <li>Option1</li>
-    <li>Option2</li>
-    <li>Option3</li>
+  <ul
+    role="listbox"
+    id="listbox"
+    class="filter-listbox"
+    [class.active]="isOpen === true"
+  >
+    <li role="option" class="listbox-item">Option1</li>
+    <li role="option" class="listbox-item">Option2</li>
+    <li role="option" class="listbox-item">Option3</li>
   </ul>
 </form>

@@ -1,1 +1,18 @@
-<p>country-card works!</p>
+<article class="country-card">
+  <img [src]="src" alt="{{ countryName }}" class="card-img" />
+  <section class="card-section">
+    <p class="country-name">{{ countryName }}</p>
+    <p class="info">
+      <span class="info-title">Population:</span>
+      {{ population }}
+    </p>
+    <p class="info">
+      <span class="info-title">Region:</span>
+      {{ region }}
+    </p>
+    <p class="info">
+      <span class="info-title">Capital:</span>
+      {{ capitalCity }}
+    </p>
+  </section>
+</article>

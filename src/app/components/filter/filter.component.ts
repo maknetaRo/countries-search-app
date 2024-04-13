@@ -19,4 +19,10 @@ export class FilterComponent {
   @Input() ariaHaspopup: string | undefined;
   @Input() tabIndex: string | undefined;
   @Input() ariaExpended: boolean = false;
+
+  isOpen = false;
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
 }
