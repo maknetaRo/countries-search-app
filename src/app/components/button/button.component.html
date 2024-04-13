@@ -1,4 +1,13 @@
-<button class="btn">
+<button
+  class="btn"
+  [attr.role]="role"
+  [attr.ariaControls]="ariaControls"
+  [attr.aria-haspopup]="ariaHaspopup"
+  [attr.aria-expanded]="ariaExpended"
+  [attr.tabindex]="tabIndex"
+>
+  @if (icon) {
   <fa-icon [icon]="icon"></fa-icon>
+  }
   {{ label }}
 </button>

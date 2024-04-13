@@ -13,5 +13,10 @@ import {
 })
 export class ButtonComponent {
   @Input({ required: true }) label: string = '';
-  @Input() icon?: any;
+  @Input() icon: any | null;
+  @Input() role: string | undefined;
+  @Input() ariaControls: string | undefined;
+  @Input() ariaHaspopup: string | undefined;
+  @Input() tabIndex: string | undefined;
+  @Input() ariaExpended: boolean = false;
 }

@@ -1,4 +1,10 @@
 section.tools {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  row-gap: 40px;
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+  }
 }

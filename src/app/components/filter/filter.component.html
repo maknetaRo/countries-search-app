@@ -1,3 +1,20 @@
-<!-- <p>filter works!</p>
-
-https://www.freecodecamp.org/news/how-to-build-an-accessible-custom-dropdown-select-element/ -->
+<form class="filter-form">
+  <label for="select" style="visibility: hidden; width: 0; height: 0"
+    >Filter by region</label
+  >
+  <app-button
+    label="Filter by region"
+    class="filter-btn"
+    [icon]="chevronUp"
+    role="combobox"
+    aria-controls="listbox"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    tabindex="0"
+  />
+  <ul>
+    <li>Option1</li>
+    <li>Option2</li>
+    <li>Option3</li>
+  </ul>
+</form>
