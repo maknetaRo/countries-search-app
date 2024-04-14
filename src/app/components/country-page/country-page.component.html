@@ -1,1 +1,50 @@
-<p>country-page works!</p>
+<!-- <a router-link="[]">
+  <app-button label="Back" class="back-btn" />
+</a> -->
+
+<article class="country-article">
+  <div class="card-img">
+    <img
+      class="country-flag"
+      [src]="countryData.flags.svg"
+      alt="{{ countryName }}"
+    />
+  </div>
+</article>
+<div>
+  {{ countryData.name }}
+
+  <p><span>Native name: </span>{{ countryData.nativeName }}</p>
+  <p><span>Population: </span>{{ countryData.population }}</p>
+  <p><span>Region: </span>{{ countryData.region }}</p>
+  <p><span>Sub Region: </span>{{ countryData.subregion }}</p>
+  <p><span>Capital: </span>{{ countryData.capital }}</p>
+</div>
+<div>
+  <p>
+    <span>Top Level Domain: </span>
+    @for (domain of countryData.topLevelDomain; track countryData) {
+    <li>{{ domain }}</li>
+    }
+  </p>
+
+  <p>
+    <span>Currencies: </span>
+    @for (curr of countryData.currencies; track countryData) {
+    <li>{{ curr.name }}</li>
+    }
+  </p>
+  <p>
+    <span>Languages: </span>
+    @for (lang of countryData.languages; track countryData) {
+    <li>{{ lang.name }}</li>
+    }
+  </p>
+
+  <p>Border Countries</p>
+  <ul>
+    @for (country of countryData.borders; track countryData) {
+    <li>{{ country }}</li>
+    }
+  </ul>
+</div>

@@ -1,15 +1,17 @@
 <section class="tools">
-  <app-search />
+  <app-search [control]="keyword" (keyup)="countryFilter()" />
   <app-filter />
 </section>
 <section class="countries">
-  @for (country of allCountries; track country) {
-  <app-country-card
-    [src]="country.flags.svg"
-    [capitalCity]="country.capital"
-    [countryName]="country.name"
-    [population]="country.population"
-    [region]="country.region"
-  />
+  @for (country of filteredCountries; track country) {
+  <a class="country-link" [routerLink]="['/country', country.name]">
+    <app-country-card
+      [src]="country.flags.svg"
+      [capitalCity]="country.capital"
+      [countryName]="country.name"
+      [population]="country.population"
+      [region]="country.region"
+    />
+  </a>
   }
 </section>

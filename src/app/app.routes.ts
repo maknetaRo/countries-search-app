@@ -4,5 +4,5 @@ import { CountryPageComponent } from './components/country-page/country-page.com
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'country', component: CountryPageComponent },
+  { path: 'country/:name', component: CountryPageComponent },
 ];
